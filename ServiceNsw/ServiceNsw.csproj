@@ -162,4 +162,7 @@
       <Compile Include="**\*.feature.cs" Exclude="@(Compile)" />
     </ItemGroup>
   </Target>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+  <Copy SourceFiles="chromedriver.exe" DestinationFolder="$(OutDir)" />
+</Target>
 </Project>
